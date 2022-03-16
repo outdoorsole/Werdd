@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         label.text = "Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there"
         label.textAlignment = .center
         label.backgroundColor = .blue
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
 
