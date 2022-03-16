@@ -20,12 +20,21 @@ class ViewController: UIViewController {
         return label
     }()
 
+    let submitButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Submit", for: .normal)
+        button.backgroundColor = .green
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
 
         view.addSubview(helloLabel)
+        view.addSubview(submitButton)
 
         NSLayoutConstraint.activate([
             helloLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
