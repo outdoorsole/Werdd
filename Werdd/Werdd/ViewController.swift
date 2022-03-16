@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Hello there"
         label.textAlignment = .center
+        label.backgroundColor = .blue
         return label
     }()
 
@@ -23,5 +24,12 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
 
         view.addSubview(helloLabel)
+
+        NSLayoutConstraint.activate([
+            helloLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            helloLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            helloLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            helloLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+        ])
     }
 }
