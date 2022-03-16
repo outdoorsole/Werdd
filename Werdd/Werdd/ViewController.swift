@@ -44,7 +44,8 @@ class ViewController: UIViewController {
 
             submitButton.topAnchor.constraint(equalTo: helloLabel.bottomAnchor, constant: 20),
             submitButton.leadingAnchor.constraint(equalTo: helloLabel.leadingAnchor, constant: 40),
-            submitButton.trailingAnchor.constraint(equalTo: helloLabel.trailingAnchor, constant: -40)
+            submitButton.trailingAnchor.constraint(equalTo: helloLabel.trailingAnchor, constant: -40),
+            submitButton.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
 }
