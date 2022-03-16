@@ -9,12 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let helloLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Hello there"
+        label.textAlignment = .center
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         view.backgroundColor = .white
+
+        view.addSubview(helloLabel)
     }
-
-
 }
-
