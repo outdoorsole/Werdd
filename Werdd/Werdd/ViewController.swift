@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     let helloLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hello there"
+        label.text = "Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there"
         label.textAlignment = .center
         label.backgroundColor = .blue
         return label
