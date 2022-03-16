@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             helloLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             helloLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            helloLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+            helloLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            helloLabel.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
 }
