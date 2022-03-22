@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     let helloLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there Hello there"
+        label.text = "Werdd."
         label.textAlignment = .center
-        label.backgroundColor = .blue
+        label.backgroundColor = UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         return label
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor =  UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
 
         view.addSubview(helloLabel)
         view.addSubview(submitButton)
