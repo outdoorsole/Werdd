@@ -20,12 +20,20 @@ class ViewController: UIViewController {
         return label
     }()
 
+    let wordLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Programming"
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor =  UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
 
         view.addSubview(titleLabel)
+        view.addSubview(wordLabel)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
