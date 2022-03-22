@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         return label
     }()
 
+    let definitionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "creating a sequence of instructions to enable the computer to do something"
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +49,7 @@ class ViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(wordLabel)
         view.addSubview(speechLabel)
+        view.addSubview(definitionLabel)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
