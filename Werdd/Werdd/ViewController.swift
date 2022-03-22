@@ -27,6 +27,13 @@ class ViewController: UIViewController {
         return label
     }()
 
+    let speechLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "noun"
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +41,7 @@ class ViewController: UIViewController {
 
         view.addSubview(titleLabel)
         view.addSubview(wordLabel)
+        view.addSubview(speechLabel)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
