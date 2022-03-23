@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .leading
-        stackView.distribution = .fill
+        stackView.distribution = .fillProportionally
         return stackView
     }()
 
@@ -87,7 +87,6 @@ class ViewController: UIViewController {
             mainStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
             mainStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
-            mainStackView.heightAnchor.constraint(equalToConstant: 304)
         ])
     }
 }
