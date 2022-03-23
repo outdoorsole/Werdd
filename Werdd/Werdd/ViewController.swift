@@ -58,14 +58,21 @@ class ViewController: UIViewController {
         return stackView
     }()
 
+    let wordView: UIView = {
+        let wordView = UIView()
+        wordView.translatesAutoresizingMaskIntoConstraints = false
+        return wordView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor =  UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
 
         view.addSubview(titleLabel)
-        view.addSubview(nestedStackView)
-        view.addSubview(mainStackView)
+        wordView.addSubview(nestedStackView)
+        wordView.addSubview(mainStackView)
+        view.addSubview(wordView)
 
         nestedStackView.addArrangedSubview(wordLabel)
         nestedStackView.addArrangedSubview(speechLabel)
@@ -80,13 +87,20 @@ class ViewController: UIViewController {
         nestedStackView.backgroundColor = .darkGray
         mainStackView.backgroundColor = .green
 
+        wordView.backgroundColor = .purple
+
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 58),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
 
-            mainStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
-            mainStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
+            mainStackView.topAnchor.constraint(equalTo: wordView.topAnchor, constant: 20),
+            mainStackView.leadingAnchor.constraint(equalTo: wordView.leadingAnchor, constant: 24),
+            mainStackView.trailingAnchor.constraint(equalTo: wordView.trailingAnchor, constant: -24),
+
+            wordView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
+            wordView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            wordView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
+            wordView.heightAnchor.constraint(equalToConstant: 304)
         ])
     }
 }
