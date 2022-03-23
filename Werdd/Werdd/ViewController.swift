@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.spacing = 10
         return stackView
     }()
