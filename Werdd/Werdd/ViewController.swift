@@ -45,8 +45,8 @@ class ViewController: UIViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.distribution = .fillEqually
+        stackView.alignment = .leading
+        stackView.distribution = .fill
         stackView.spacing = 10
         return stackView
     }()
@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.alignment = .center
+        stackView.alignment = .leading
         stackView.distribution = .fill
-        stackView.spacing = 10
+        stackView.spacing = 7
         return stackView
     }()
 
