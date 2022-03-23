@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "creating a sequence of instructions to enable the computer to do something"
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
 
