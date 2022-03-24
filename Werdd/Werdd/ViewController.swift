@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         let wordView = UIView()
         wordView.translatesAutoresizingMaskIntoConstraints = false
         wordView.layer.cornerRadius = 30
-        wordView.backgroundColor = .steelBlue
+        setBackgroundColor(view: wordView, color: .steelBlue)
 
         wordView.addSubview(nestedStackView)
         wordView.addSubview(mainStackView)
@@ -82,9 +82,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .lightBeige
+        setBackgroundColor(view: view, color: .lightBeige)
         addSubviews()
         addConstraints()
+    }
+
+    func setBackgroundColor(view: UIView, color: UIColor) {
+        view.backgroundColor = color
     }
 
     func addSubviews() {
