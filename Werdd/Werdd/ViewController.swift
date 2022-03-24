@@ -110,7 +110,7 @@ class ViewController: UIViewController {
             wordView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
             wordView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             wordView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
-            wordView.heightAnchor.constraint(equalToConstant: 304)
+            wordView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.374)
         ])
     }
 }
