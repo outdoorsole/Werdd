@@ -70,6 +70,7 @@ class ViewController: UIViewController {
     let wordView: UIView = {
         let wordView = UIView()
         wordView.translatesAutoresizingMaskIntoConstraints = false
+        wordView.layer.cornerRadius = 30
         wordView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return wordView
     }()
