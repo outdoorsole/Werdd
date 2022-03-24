@@ -83,9 +83,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(named: "lightBeige")
-
-        view.addSubview(titleLabel)
-        view.addSubview(wordView)
+        addSubviews()
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 58),
@@ -102,5 +100,10 @@ class ViewController: UIViewController {
             wordView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
             wordView.heightAnchor.constraint(equalToConstant: 304)
         ])
+    }
+
+    func addSubviews() {
+        view.addSubview(titleLabel)
+        view.addSubview(wordView)
     }
 }
