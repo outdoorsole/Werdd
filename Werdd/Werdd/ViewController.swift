@@ -46,17 +46,20 @@ class ViewController: UIViewController {
         return label
     }()
 
-    let nestedStackView: UIStackView = {
+    lazy var nestedStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.alignment = .firstBaseline
         stackView.spacing = 5
         stackView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
+
+        stackView.addArrangedSubview(wordLabel)
+        stackView.addArrangedSubview(speechLabel)
         return stackView
     }()
 
-    let mainStackView: UIStackView = {
+    lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -64,14 +67,20 @@ class ViewController: UIViewController {
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
+
+        stackView.addArrangedSubview(nestedStackView)
+        stackView.addArrangedSubview(definitionLabel)
         return stackView
     }()
 
-    let wordView: UIView = {
+    lazy var wordView: UIView = {
         let wordView = UIView()
         wordView.translatesAutoresizingMaskIntoConstraints = false
         wordView.layer.cornerRadius = 30
         wordView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
+
+        wordView.addSubview(nestedStackView)
+        wordView.addSubview(mainStackView)
         return wordView
     }()
 
@@ -81,15 +90,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(red: 0.91, green: 0.90, blue: 0.89, alpha: 1.00)
 
         view.addSubview(titleLabel)
-        wordView.addSubview(nestedStackView)
-        wordView.addSubview(mainStackView)
         view.addSubview(wordView)
-
-        nestedStackView.addArrangedSubview(wordLabel)
-        nestedStackView.addArrangedSubview(speechLabel)
-
-        mainStackView.addArrangedSubview(nestedStackView)
-        mainStackView.addArrangedSubview(definitionLabel)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 58),
