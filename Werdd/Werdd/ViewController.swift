@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
+        stackView.alignment = .firstBaseline
         stackView.spacing = 10
         return stackView
     }()
@@ -91,8 +92,6 @@ class ViewController: UIViewController {
 
         nestedStackView.backgroundColor = .darkGray
         mainStackView.backgroundColor = .green
-
-        wordView.backgroundColor = .purple
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 58),
