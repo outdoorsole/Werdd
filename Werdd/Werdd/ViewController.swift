@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor =  UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
+        view.backgroundColor = UIColor(red: 0.91, green: 0.90, blue: 0.89, alpha: 1.00)
 
         view.addSubview(titleLabel)
         wordView.addSubview(nestedStackView)
