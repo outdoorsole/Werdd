@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         label.text = "Werdd."
         label.font = UIFont(name: "Rubik-SemiBold", size: 36)
         label.backgroundColor = UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
-        label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
         return label
     }()
 
@@ -32,6 +31,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "noun"
         label.font = UIFont(name: "Helvetica-Oblique", size: 12)
+        label.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return label
     }()
 
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         label.font = UIFont(name: "Rubik-Light", size: 12)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return label
     }()
 
@@ -50,7 +51,8 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.alignment = .firstBaseline
-        stackView.spacing = 10
+        stackView.spacing = 5
+        stackView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return stackView
     }()
 
@@ -61,12 +63,14 @@ class ViewController: UIViewController {
         stackView.spacing = 7
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
+        stackView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return stackView
     }()
 
     let wordView: UIView = {
         let wordView = UIView()
         wordView.translatesAutoresizingMaskIntoConstraints = false
+        wordView.backgroundColor = UIColor(red: 0.21, green: 0.51, blue: 0.72, alpha: 1.00)
         return wordView
     }()
 
@@ -85,13 +89,6 @@ class ViewController: UIViewController {
 
         mainStackView.addArrangedSubview(nestedStackView)
         mainStackView.addArrangedSubview(definitionLabel)
-
-        wordLabel.backgroundColor = .yellow
-        speechLabel.backgroundColor = .red
-        definitionLabel.backgroundColor = .blue
-
-        nestedStackView.backgroundColor = .darkGray
-        mainStackView.backgroundColor = .green
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 58),
