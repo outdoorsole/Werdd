@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Werdd."
+        label.font = UIFont(name: "Rubik-SemiBold", size: 36)
         label.backgroundColor = UIColor(red: 0.92, green: 0.91, blue: 0.90, alpha: 1.00)
         label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
         return label
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Programming"
+        label.font = UIFont(name: "Rubik-Bold", size: 24)
         return label
     }()
 
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "noun"
+        label.font = UIFont(name: "Helvetica-Oblique", size: 12)
         return label
     }()
 
@@ -36,6 +39,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "creating a sequence of instructions to enable the computer to do something"
+        label.font = UIFont(name: "Rubik-Light", size: 12)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         return label
@@ -53,6 +57,7 @@ class ViewController: UIViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.spacing = 7
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         return stackView
