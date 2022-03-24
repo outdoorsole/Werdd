@@ -97,6 +97,8 @@ class ViewController: UIViewController {
             mainStackView.leadingAnchor.constraint(equalTo: wordView.leadingAnchor, constant: 24),
             mainStackView.trailingAnchor.constraint(equalTo: wordView.trailingAnchor, constant: -24),
 
+            definitionLabel.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+
             wordView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
             wordView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             wordView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23),
